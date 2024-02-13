@@ -334,6 +334,7 @@
 
 .story .top-part p {
   width: 70vw;
+  font-weight: 300;
 }
 
 
@@ -352,7 +353,7 @@
   content: '';
   position: absolute;
   width: 4px;
-  height: 77%;
+  height: 72%;
   background: var(--pink-color);
   top: 80px;
   left: 50%;
@@ -369,11 +370,12 @@
 
 /* timeline text-box */
 .story .bot-part .container .text-box {
-  padding: 20px 30px;
+  padding: 20px 20px;
   background-color: var(--pink-color);
   position: relative;
   border-radius: 10px;
   font-size: 1rem;
+  text-align: justify;
 }
 
 /* timeline left text-box */
@@ -435,5 +437,7 @@
 
 /* GALLERY */
 .gallery {
-  height: 100vh;
+  font-family: var(--regular-font);
+  background: url(../img/gallery-bg2.png);
+  background-size: cover;
 }
