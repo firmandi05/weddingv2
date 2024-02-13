@@ -282,7 +282,6 @@
 .info .mid-part .maps iframe {
   width: 100%;
   height: 30rem;
-
 }
 
 .info .bot-part {
@@ -294,7 +293,7 @@
 
 /* STORY */
 .story::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -337,8 +336,6 @@
   font-weight: 300;
 }
 
-
-
 /* timeline middle line */
 .story .bot-part {
   position: relative;
@@ -350,7 +347,7 @@
 
 /* timeline middle line */
 .story .bot-part::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 4px;
   height: 72%;
@@ -388,7 +385,6 @@
 .story .bot-part .right-container {
   left: 50%;
   text-align: end;
-
 }
 
 /* timeline middle picture */
@@ -440,4 +436,38 @@
   font-family: var(--regular-font);
   background: url(../img/gallery-bg2.png);
   background-size: cover;
+  padding: 5rem 0;
+}
+
+.gallery .top-part {
+  text-align: center;
+  text-shadow: 1.5px 1.5px 2px #0000002f;
+  margin-bottom: 5rem;
+}
+
+.gallery .top-part h2 {
+  font-family: var(--cursive-font);
+  font-size: 6rem;
+  color: var(--pink-color);
+}
+
+.gallery .top-part p {
+  padding: 0 20rem;
+  font-weight: 300;
+}
+
+.gallery .bot-part {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery .bot-part img {
+  width: 40%;
+  border: 0 solid var(--pink-color);
+  border-radius: 8px;
+  margin: 0.5rem;
 }
