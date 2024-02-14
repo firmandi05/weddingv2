@@ -357,12 +357,10 @@
   font-size: 1.2rem;
 }
 
-/* timeline middle line */
 .story .bot-part {
   position: relative;
   max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 3rem;
+  margin: 100px auto;
   color: white;
 }
 
@@ -370,13 +368,33 @@
 .story .bot-part::after {
   content: "";
   position: absolute;
-  width: 4px;
-  height: 72%;
+  width: 6px;
+
+  /* timeline middle line bot point */
+  height: 75%;
+
   background: var(--pink-color);
-  top: 80px;
+
+  /* timeline middle line top point */
+  top: 25px;
+
   left: 50%;
-  margin-left: -2px;
+  margin-left: -3px;
   z-index: -1;
+}
+
+.timeline-line-animation {
+  animation: moveline 3.5s linear forwards;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 75%;
+  }
 }
 
 /* timeline text-box */
@@ -384,15 +402,54 @@
   padding: 10px 50px;
   position: relative;
   width: 50%;
+  opacity: 0;
 }
+
+.text-box-animation {
+  animation: movedown 0.3s linear forwards;
+  animation-delay: .5s;
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .story .bot-part .container:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.story .bot-part .container:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.story .bot-part .container:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.story .bot-part .container:nth-child(4) {
+  animation-delay: 3s;
+} */
+
 
 /* timeline text-box */
 .story .bot-part .container .text-box {
-  padding: 20px 20px;
+  padding: 20px 30px;
   background-color: var(--pink-color);
   position: relative;
-  border-radius: 10px;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-size: 15px;
   text-align: justify;
 }
 
@@ -411,40 +468,35 @@
 /* timeline middle picture */
 .story .bot-part .container img {
   position: absolute;
-  size: 50%;
   width: 40px;
-  height: 40px;
   border-radius: 50%;
   right: -20px;
-  top: 65px;
+  top: 20px;
   z-index: 1;
 }
 
-/* timeline middle picture */
 .story .bot-part .right-container img {
   left: -20px;
 }
 
 /* timeline pointing arrow */
-.story .bot-part .container .text-box .left-pointing-arrow {
+.story .bot-part .left-container-arrow {
   height: 0;
   width: 0;
   position: absolute;
-  top: 60px;
+  top: 22px;
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 15px solid var(--pink-color);
-  right: -14px;
+  right: -15px;
 }
 
-/* timeline pointing arrow */
-
-.story .bot-part .container .text-box .right-pointing-arrow {
+.story .bot-part .right-container-arrow {
   height: 0;
   width: 0;
   position: absolute;
-  top: 60px;
+  top: 22px;
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
@@ -780,11 +832,12 @@ footer h2 {
 
   /* STORY */
   .story .bot-part {
-    margin: 10% 45px 10% -70px;
+    margin: 50px auto;
   }
 
   .story .bot-part::after {
-    left: 103%;
+    left: 31px;
+    right: 0;
   }
 
   .story .bot-part .container {
@@ -792,22 +845,55 @@ footer h2 {
     padding-left: 80px;
     padding-right: 25px;
   }
-  .story .bot-part .container img {
-    right: -35px;
 
+  .story .bot-part .container .text-box {
+    font-size: 13px;
+    text-align: start;
   }
 
   .story .bot-part .right-container {
     left: 0;
   }
 
-  .story .bot-part .right-container img {
-    left: 433px;
+  .story .bot-part .right-container img,
+  .story .bot-part .left-container img {
+    left: 10px;
   }
 
-  .story .bot-part .container .text-box .right-pointing-arrow {
-    left: 330px;
-    border-left: 15px solid var(--pink-color);
-    border-right: 0;
+  .story .bot-part .left-container-arrow,
+  .story .bot-part .right-container-arrow {
+    border-right: 15px solid var(--pink-color);
+    border-left: 0;
+    left: -15px;
+  }
+
+  /* GALLERY */
+  .gallery .bot-part {
+    width: 100vw;
+  }
+
+
+  .gallery .bot-part a {
+  width: 45%;
+  }
+
+  /* GIFT */
+  .gift .bot-part {
+    width: 100vw;
+    height: 350px;
+  }
+
+  .gift .bot-part .container {
+    gap: 3px;
+    padding: 5px 3px;
+    width: 47%;
+  }
+
+  .gift .bot-part .container > img {
+    height: 20px;
+  }
+
+  .gift .bot-part .container .copy p {
+    font-size: 1.5rem;
   }
 }

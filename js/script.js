@@ -18,3 +18,23 @@ function myFunction() {
     x.className = "topnav";
   }
 } 
+
+// STORY
+const inViewport = (entries, observer) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("text-box-animation", entry.isIntersecting);
+  });
+};
+
+const Obs = new IntersectionObserver(inViewport);
+const obsOptions = {
+  threshold: 1,
+};
+
+document.querySelectorAll('.story .bot-part .container').forEach(el => {
+  Obs.observe(el, obsOptions);
+});
+
+
+let rekening = document.getElementById("bri").innerText
+console.log(rekening)
