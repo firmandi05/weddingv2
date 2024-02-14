@@ -9,4 +9,12 @@ async function copyContent(target) {
 }, 1000);
 }
 
-// Comment Section
+// navbar
+function myFunction() {
+  let x = document.getElementById("myNavbar");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+} 
