@@ -560,15 +560,113 @@
  align-self: flex-start;
 }
 
-.gift .bot-part .container .copy span {
- /* flex-basis: 10%; */
-}
-
 .tooltip {
   display: none;
-  /* margin-left: 40px; */
   padding: 1px 5px;
   background-color: var(--pink-color);
   border-radius: 4px;
   color: #fff;
+}
+
+.gift .bot-part .container .copy img:hover {
+  cursor: pointer;
+}
+
+/* COMMENT */
+.comment {
+  font-family: var(--regular-font);
+  text-align: center;
+  padding: 5rem 0;
+}
+
+/* top-part */
+.comment .top-part {
+  width: 80vw;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  text-shadow: 1.5px 1.5px 2px #0000002f;
+}
+
+.comment .top-part h3 {
+ font-size: 1rem;
+ font-weight: 300;
+ color: rgb(75, 75, 75);
+}
+
+.comment .top-part h2 {
+  font-size: 6rem;
+  font-family: var(--cursive-font);
+  color: var(--pink-color);
+}
+
+.comment .top-part p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* bot-part */
+.comment > .bot-part {
+  width: 60vw;
+  margin: 0 auto;
+}
+.comment > .bot-part .comments {
+  border: 1px solid var(--pink-color);
+  border-radius: 30px;
+  min-height: 10rem;
+  max-height: 30rem;
+  overflow: scroll;
+  word-wrap: break-word;
+  padding: 20px;
+}
+
+.comment > .bot-part .comment-box {
+  padding: 1rem 0;
+  border: 1px solid var(--pink-color);
+  border-top: 0;
+  border-radius: 30px;
+  /* width: 80%; */
+  margin: 0 auto;
+}
+
+.comment > .bot-part .comment-box  h2 {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.comment > .bot-part .comment-box .user-name input {
+  margin-top: .5rem;
+  width: 40%;  
+  height: 2rem;
+  border: 1px solid var(--pink-color);
+  border-radius: 5px;
+}
+
+.comment > .bot-part .comment-box .comment-input {
+  margin-top: 2rem;
+}
+
+.comment > .bot-part .comment-box .comment-input textarea {
+  margin-top: .5rem;
+  width: 50%;
+  height: 4rem;
+  border: 1px solid var(--pink-color);
+  border-radius: 5px;
+  resize: none;
+  font-family: var(--regular-font);
+}
+
+.comment > .bot-part .comment-box .comment-input .buttons {
+  margin-top: .7rem;
+}
+
+.comment > .bot-part .comment-box .comment-input .buttons button {
+  /* outline-width: 0; */
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.comment > .bot-part .comment-box .comment-input .buttons button.abled {
+  background-color: var(--pink-color);
+  color: white;
 }

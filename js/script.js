@@ -1,3 +1,5 @@
+
+// Copy to Clipboard
 async function copyContent(target) {
   let rekening = document.getElementById(target).innerText;
   navigator.clipboard.writeText(rekening);
@@ -6,3 +8,5 @@ async function copyContent(target) {
     document.getElementById(`${target}-tooltip`).style.display = "none";
 }, 1000);
 }
+
+// Comment Section

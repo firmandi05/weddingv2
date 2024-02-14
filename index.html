@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Firman & Astri Wedding</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
   </head>
 
   <body>
@@ -31,7 +32,7 @@
         <a href="#story" class="link">Story</a>
         <a href="#gallery" class="link">Gallery</a>
         <a href="#gift" class="link">Gift</a>
-        <a href="#comment" class="link">Comment</a>
+        <a href="#komentar" class="link">Comment</a>
       </nav>
     </section>
 
@@ -305,7 +306,6 @@
       </div>
 
       <div class="bot-part">
-
         <div class="container bca">
           <img src="./img/icon/bca.png" alt="" />
           <h4>HAIRU FIRMANDI</h4>
@@ -327,7 +327,7 @@
           <img src="./img/icon/bri.png" alt="" />
           <h4>HAIRU FIRMANDI</h4>
           <div class="copy">
-            <p id="bri" >7266 0100 2676 509</p>
+            <p id="bri">7266 0100 2676 509</p>
             <span id="copy-bri" onclick="copyContent('bri')">
               <img
                 src="./img/icon/th-3828395282.svg"
@@ -344,7 +344,7 @@
           <img src="./img/icon/seabank.png" alt="" />
           <h4>HAIRU FIRMANDI</h4>
           <div class="copy">
-            <p id="seabank" >9011 0368 1852</p>
+            <p id="seabank">9011 0368 1852</p>
             <span id="copy-seabank" onclick="copyContent('seabank')">
               <img
                 src="./img/icon/th-3828395282.svg"
@@ -360,7 +360,7 @@
         <div class="container gopay">
           <img src="./img/icon/GoPay.png" alt="" />
           <h4>HAIRU FIRMANDI</h4>
-          <div class="copy" >
+          <div class="copy">
             <p id="gopay">082251106167</p>
             <span id="copy-emoney" onclick="copyContent('gopay')">
               <img
@@ -410,6 +410,35 @@
       </div>
     </section>
 
+    <section id="komentar" class="comment">
+      <div class="top-part">
+        <h3>TINGGALKAN PESAN ANDA!</h3>
+        <h2>Pesan & Kesan</h2>
+        <p>
+          Sebuah wadah di mana para tamu dapat menuliskan pesan-pesan penuh
+          berkah dan kesan-kesan yang mengalir dari hati yang penuh ketulusan.
+          Di sini, tiap kata adalah doa yang diletakkan dengan penuh keikhlasan
+          untuk membentuk mahligai cinta yang berkat dan penuh rahmat. Inilah
+          tempat di mana setiap jejak pesan adalah bagian dari perjalanan menuju
+          kebahagiaan abadi.
+        </p>
+      </div>
+
+      <div class="bot-part">
+        <div class="waline" id="waline"></div>
+        
+      </div>
+    </section>
+
     <script src="./js/script.js"></script>
+    <script type="module">
+      import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+  
+      init({
+        el: '#waline',
+        serverURL: 'https://comment-system-huohkimg3-firmandi05s-projects.vercel.app/',
+        lang: 'en',
+      });
+    </script>
   </body>
 </html>
