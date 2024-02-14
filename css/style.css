@@ -708,10 +708,41 @@ footer h2 {
     font-size: 60%;
   }
 
+  /* HERO */
+  .hero::before {
+    animation: rolling-background 10s ease-out infinite;
+  }
+
+  @keyframes rolling-background {
+    0%,100% {
+      background-image: url(../img/IMG-20240207-WA0019.jpg);
+      background-position: 70% 100%;
+    }
+    25% {
+      background-image: url(../img/IMG-20240207-WA0023.jpg);
+
+    }
+    50% {
+      background-image: url(../img/IMG-20240207-WA0025.jpg);
+      background-size: cover;
+      background-position: 70% 100%;
+      
+    }
+    75% {
+      background-image: url(../img/IMG-20240207-WA0020.jpg);
+
+    }
+    /* 100% {
+      background-image: url(../img/IMG-20240207-WA0026.jpg);
+
+    } */
+  }
+
   header .bot-part {
     padding-bottom: 10vh;
   }
 
+  /* TOPNAV */
   .navbar .logo {
     padding-top: 0.5rem;
   }
@@ -880,7 +911,7 @@ footer h2 {
   /* GIFT */
   .gift .bot-part {
     width: 100vw;
-    height: 350px;
+    height: 250px;
   }
 
   .gift .bot-part .container {
@@ -896,4 +927,9 @@ footer h2 {
   .gift .bot-part .container .copy p {
     font-size: 1.5rem;
   }
+
+  .gift .bot-part .container .copy img {
+    width: 18px;
+    height: 18px;
+    }
 }
