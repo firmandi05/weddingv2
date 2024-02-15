@@ -14,6 +14,10 @@
   /* border: 1px solid rebeccapurple; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow: hidden;
 }
@@ -738,10 +742,6 @@ footer h2 {
       background-image: url(../img/IMG-20240207-WA0020.jpg);
 
     }
-    /* 100% {
-      background-image: url(../img/IMG-20240207-WA0026.jpg);
-
-    } */
   }
 
   header .bot-part {
