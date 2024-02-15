@@ -24,6 +24,16 @@ function myFunction() {
   }
 } 
 
+// AUTO CLOSE NAVBAR
+const navLink = document.querySelectorAll('.link');
+
+navLink.forEach((link) => {
+ link.addEventListener('click', () => {
+  const navBar = document.querySelector('#myNavbar');
+  navBar.classList.remove('responsive');
+ })
+});
+
 // STORY
 const inViewport = (entries, observer) => {
   entries.forEach(entry => {
