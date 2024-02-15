@@ -14,6 +14,10 @@
   /* border: 1px solid rebeccapurple; */
 }
 
+body {
+  overflow: hidden;
+}
+
 /* HERO */
 .hero::before {
   position: absolute;
@@ -59,15 +63,15 @@
 
 .hero .bot-part {
   font-family: var(--regular-font);
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .hero .bot-part p {
   font-size: 2.3rem;
 }
 
-.hero .bot-part div.countdown {
-  font-size: 2.1rem;
+.enable-scroll {
+  overflow: scroll;
 }
 
 .hero .bot-part button {
@@ -204,6 +208,7 @@
   width: 300px;
   height: 300px;
   border-radius: 40%;
+  margin-top: 50px;
 }
 .home .bot-part .groom .text {
   display: flex;
@@ -551,6 +556,7 @@
 .gallery .bot-part a {
   width: 30%;
   margin: 0.5rem;
+  opacity: 0;
 }
 
 /* GIFT */
@@ -816,6 +822,7 @@ footer h2 {
     width: 150px;
     height: 150px;
     align-self: center;
+    margin-top: 0;
   }
 
   .home .bot-part .groom.male .text p {
@@ -931,5 +938,10 @@ footer h2 {
   .gift .bot-part .container .copy img {
     width: 18px;
     height: 18px;
-    }
+  }
+
+  /* COMMENT */
+  .comment > .bot-part {
+    width: 90vw;
+  }
 }

@@ -39,7 +39,23 @@ const obsOptions = {
 document.querySelectorAll('.story .bot-part .container').forEach(el => {
   Obs.observe(el, obsOptions);
 });
+document.querySelectorAll('.gallery .bot-part a').forEach(el => {
+  Obs.observe(el, obsOptions);
+});
 
+// AUTO PLAY SONG
+const audio = new Audio("./song/page-song.mp3");
+const playSongBtn = document.querySelector('button');
 
-let rekening = document.getElementById("bri").innerText
-console.log(rekening)
+playSongBtn.addEventListener('click', () => {
+  audio.play()
+})
+
+// Disable Enable Scroll 
+const inviteButton = document.querySelector('button'); 
+
+inviteButton.addEventListener('click', () => {
+  const body = document.querySelector('body');
+  body.classList.add('enable-scroll');
+
+})
