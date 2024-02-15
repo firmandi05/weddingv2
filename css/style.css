@@ -568,6 +568,7 @@ body {
   font-family: var(--regular-font);
   padding: 5rem 0;
   text-shadow: 1.5px 1.5px 2px #0000002f;
+  background-image: url(../img/gift-bg.jpg);
 }
 
 /* top-part */
@@ -655,6 +656,7 @@ body {
   font-family: var(--regular-font);
   text-align: center;
   padding: 5rem 0;
+  background-image: url(../img/comment-bg.jpg);
 }
 
 /* top-part */
